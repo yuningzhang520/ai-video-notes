@@ -2,6 +2,8 @@
 
 > Turn a visually-dense video — a conference talk, a coding tutorial, a lecture — into structured notes where the on-screen content (code, tables, diagrams) is extracted, and **every point links back to the exact frame it came from, so you can verify it.**
 
+▶️ Demo video (5:44): https://youtu.be/3rRKfdJwtw8
+
 [![Watch the demo](https://img.youtube.com/vi/3rRKfdJwtw8/maxresdefault.jpg)](https://youtu.be/3rRKfdJwtw8)
 
 *~5-minute walkthrough — click to watch.*
