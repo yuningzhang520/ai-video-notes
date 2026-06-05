@@ -1,0 +1,410 @@
+/* Verifiable Visual Notes -- a warm editorial reading surface.
+   Light, document-first: warm off-white paper, warm dark ink (never pure #000/#fff), depth by
+   ELEVATION not boxes (sections flow with whitespace + hairlines; only the evidence block is
+   recessed). One cool ink-blue accent marks verifiability and nothing else. Refined serif/sans/
+   mono typographic spine; motion concentrated on a few high-impact moments. */
+
+@font-face { font-family: "Newsreader"; font-style: normal; font-weight: 500; font-display: swap; src: url("/static/fonts/newsreader-500.woff2") format("woff2"); }
+@font-face { font-family: "Newsreader"; font-style: normal; font-weight: 600; font-display: swap; src: url("/static/fonts/newsreader-600.woff2") format("woff2"); }
+@font-face { font-family: "Hanken Grotesk"; font-style: normal; font-weight: 400; font-display: swap; src: url("/static/fonts/hanken-400.woff2") format("woff2"); }
+@font-face { font-family: "Hanken Grotesk"; font-style: normal; font-weight: 500; font-display: swap; src: url("/static/fonts/hanken-500.woff2") format("woff2"); }
+@font-face { font-family: "Hanken Grotesk"; font-style: normal; font-weight: 600; font-display: swap; src: url("/static/fonts/hanken-600.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("/static/fonts/jetbrains-400.woff2") format("woff2"); }
+
+:root {
+  /* warm paper + ink (never pure black/white) */
+  --paper: #faf8f3;          /* the reading surface */
+  --sunken: #f0ede3;         /* recessed evidence block -- the one elevation layer */
+  --ink: #24201a;            /* primary text (warm dark ink) */
+  --ink-2: #5d5446;          /* secondary / gist */
+  --ink-3: #756d5d;          /* meta / badges (kept >=4.5:1 on paper) */
+
+  --hairline: #e8e2d6;
+  --hairline-strong: #dbd4c6;
+  --rail: #d4cdbe;           /* bullet grouping rail -- GRAYSCALE (never the accent) */
+  --rail-faint: #e6dfd2;     /* ungrounded: dashed + faint */
+
+  /* one cool accent on warm paper -- verify chips / links / focus ONLY */
+  --accent: #3f608f;
+  --accent-quiet: rgba(63, 96, 143, 0.07);
+  --accent-line: rgba(63, 96, 143, 0.32);
+
+  /* confidence -- uncalibrated triage, never "safe": high neutral, med ochre, low clay */
+  --conf-high: #756d5d;
+  --conf-med:  #876728;
+  --conf-low:  #a5463a;
+
+  --font-title: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-body: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 32px; --s7: 48px;
+  --r-sm: 6px; --r-md: 10px; --r-lg: 14px;
+  --header-h: 52px;          /* sticky top-bar height; the sticky player offsets by it (kept in sync) */
+  --toc-w: 220px;            /* table-of-contents drawer width (desktop only, >=1100px) */
+
+  --ease: cubic-bezier(.4, 0, .2, 1);
+  --dur-fast: 140ms;
+  --dur: 220ms;
+  --shadow-soft: 0 1px 2px rgba(50, 40, 28, 0.06), 0 6px 16px rgba(50, 40, 28, 0.05);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 15px/1.6 var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---- Top bar ---------------------------------------------------------------------- */
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: var(--s4);
+  height: var(--header-h);    /* explicit height -> the player column can offset by --header-h */
+  padding: 0 var(--s5);
+  background: rgba(250, 248, 243, 0.85);
+  backdrop-filter: saturate(120%) blur(8px);
+  border-bottom: 1px solid var(--hairline);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+.brand { font-family: var(--font-title); font-weight: 600; font-size: 16px; letter-spacing: 0.01em; color: var(--ink); }
+.video-title { color: var(--ink-3); font-size: 13px; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.badge-demo, .badge-fixture {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 2px 9px;
+}
+.badge-demo { color: var(--accent); border: 1px solid var(--accent-line); }
+.badge-fixture { color: var(--ink-3); border: 1px solid var(--hairline-strong); }
+
+/* ---- Layout ----------------------------------------------------------------------- */
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 440px);
+  gap: var(--s7);
+  max-width: 1240px;
+  margin: 0 auto;
+  /* same centering as `margin:0 auto`, but expressed as a LENGTH so it can transition when the
+     ToC opens (auto margins can't animate). >=1240px viewport: centered; narrower: flush. */
+  margin-left: max(0px, calc((100% - 1240px) / 2));
+  padding: var(--s6) var(--s5) var(--s7);
+  align-items: start;
+}
+.notes { min-width: 0; max-width: 720px; }
+.status { color: var(--ink-3); padding: var(--s5) 0; }
+
+/* ---- Sections: a typeset document, not cards -- whitespace + a hairline rule ------ */
+.section { padding: var(--s6) 0 var(--s5); scroll-margin-top: calc(var(--header-h) + var(--s4)); }
+.section:first-child { padding-top: var(--s2); }
+.section + .section { border-top: 1px solid var(--hairline); }
+.section {
+  animation: reveal 380ms var(--ease) both;
+  animation-delay: calc(var(--i, 0) * 45ms);
+}
+@keyframes reveal { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+.section h2 {
+  font-family: var(--font-title);
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0 0 var(--s2);
+}
+.gist {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  margin: 0 0 var(--s5);
+  max-width: 58ch;
+}
+
+/* ---- Bullets: each a group with a left rail spanning point + its evidence --------- */
+.bullets { display: flex; flex-direction: column; }
+.bullet {
+  position: relative;
+  padding-left: var(--s4);
+  border-left: 2px solid var(--rail);   /* grayscale; visual == spoken (block presence is the cue) */
+  margin-bottom: var(--s5);
+}
+.bullet:last-child { margin-bottom: 0; }
+.bullet.ungrounded { border-left-style: dashed; border-left-color: var(--rail-faint); }
+
+.bullet-line { display: flex; align-items: flex-start; gap: var(--s3); }
+.bullet-text { flex: 1; font-size: 15.5px; line-height: 1.62; color: var(--ink); max-width: 60ch; }
+.bullet.ungrounded .bullet-text { color: var(--ink-2); }
+
+/* Verify affordance: a real <button> -- the ONLY place the accent appears in the notes. */
+.verify-chip {
+  flex-shrink: 0;
+  margin-top: 2px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.01em;
+  color: var(--accent);
+  background: transparent;
+  border: 1px solid var(--accent-line);
+  border-radius: var(--r-sm);
+  padding: 2px 8px;
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+}
+.verify-chip:hover { background: var(--accent-quiet); border-color: var(--accent); }
+.verify-chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Ungrounded: present but receding -- no chip, muted, quiet italic marker. */
+.no-source {
+  flex-shrink: 0;
+  margin-top: 3px;
+  font-size: 11px;
+  font-style: italic;
+  color: var(--ink-3);
+}
+
+/* ---- Evidence block: recessed under the bullet (the one elevation layer) ---------- */
+.block {
+  margin-top: var(--s3);
+  background: var(--sunken);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-md);
+  padding: var(--s3);
+  overflow: hidden;
+}
+.block-head { display: flex; align-items: center; gap: var(--s2); margin-bottom: var(--s2); }
+.type-badge {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.conf { font-size: 10.5px; letter-spacing: 0.01em; margin-left: auto; }
+.conf-high { color: var(--conf-high); }
+.conf-med  { color: var(--conf-med); }
+.conf-low  { color: var(--conf-low); }
+
+/* Animated disclosure for long code/tables (neutral, not accent -- it's not a verify action). */
+.disclosure {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  color: var(--ink-2);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  transition: color var(--dur-fast) var(--ease);
+}
+.disclosure:hover { color: var(--ink); }
+.disclosure:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+.disclosure .caret { display: inline-block; transition: transform var(--dur) var(--ease); }
+.collapsible.open .disclosure .caret { transform: rotate(90deg); }
+.collapse { display: grid; grid-template-rows: 0fr; transition: grid-template-rows var(--dur) var(--ease); }
+.collapsible.open .collapse { grid-template-rows: 1fr; }
+.collapse-inner { overflow: hidden; min-height: 0; }
+.collapsible.open .collapse-inner { padding-top: var(--s3); }
+
+/* ---- Rendered markdown ------------------------------------------------------------ */
+.block-body { font-size: 13.5px; line-height: 1.55; color: var(--ink); }
+.block-body > :first-child { margin-top: 0; }
+.block-body > :last-child { margin-bottom: 0; }
+.md-h { font-family: var(--font-body); font-size: 13.5px; font-weight: 600; margin: var(--s3) 0 var(--s1); color: var(--ink); }
+.md-p { margin: var(--s2) 0; }
+.md-ul { margin: var(--s2) 0; padding-left: var(--s4); }
+.md-ul li { margin: 3px 0; }
+.block-body code, code {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  background: rgba(40, 30, 20, 0.05);
+  border: 1px solid var(--hairline-strong);
+  border-radius: 4px;
+  padding: 0 4px;
+  color: var(--ink);
+}
+pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font: 400 12.5px/1.55 var(--font-mono);
+  color: var(--ink);
+}
+table.md { border-collapse: collapse; width: 100%; font-size: 12.5px; margin: var(--s1) 0; }
+table.md th, table.md td { border: 1px solid var(--hairline-strong); padding: 5px 9px; text-align: left; vertical-align: top; }
+table.md th { background: #ebe6db; font-weight: 600; color: var(--ink); }
+
+/* A diagram's value is its image; content is the alt/hover description. */
+.block-diagram { margin: 0; }
+.block-diagram img { width: 100%; border-radius: var(--r-sm); border: 1px solid var(--hairline-strong); display: block; }
+
+/* ---- Verify column: player + source panel ---------------------------------------- */
+.verify-col { position: sticky; top: calc(var(--header-h) + var(--s4)); display: flex; flex-direction: column; gap: var(--s4); }
+.player-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  border: 1px solid var(--hairline-strong);
+  box-shadow: var(--shadow-soft);
+}
+#player, .player-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+.frame-panel {
+  background: #fdfcf8;
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-lg);
+  padding: var(--s4);
+  min-height: 96px;
+  box-shadow: var(--shadow-soft);
+}
+.frame-panel-empty { color: var(--ink-3); font-size: 13px; line-height: 1.55; }
+
+/* Source content fades in/out for a fluid frame<->transcript swap. */
+.source-content {
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+.source-content.in { opacity: 1; transform: none; }
+.source-content.out { opacity: 0; transform: translateY(-4px); }
+
+.source-frame { margin: 0 0 var(--s3); }
+.source-frame img { width: 100%; border-radius: var(--r-md); border: 1px solid var(--hairline-strong); display: block; }
+.source-cap { margin-top: var(--s2); font-family: var(--font-mono); font-size: 11px; color: var(--ink-3); letter-spacing: 0.01em; }
+.source-cap .ref { color: var(--accent); }
+
+.source-quote-label {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: var(--s1);
+}
+.source-quote {
+  margin: 0;
+  padding-left: var(--s3);
+  border-left: 2px solid var(--hairline-strong);
+  color: var(--ink-2);
+  font-size: 13.5px;
+  line-height: 1.6;
+  font-style: italic;
+}
+.source-meta { margin-top: var(--s2); font-family: var(--font-mono); font-size: 11px; color: var(--ink-3); }
+
+/* ---- Table of contents: a reflow-push drawer, DESKTOP ONLY (>=1100px) -------------- */
+/* Hidden below the breakpoint -- no toggle, no panel, no padding, no dead UI on narrow. */
+.toc, .toc-toggle { display: none; }
+
+@media (min-width: 1100px) {
+  .toc-toggle {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+    width: 28px;
+    height: 28px;
+    padding: 6px;
+    background: transparent;
+    border: 0;
+    border-radius: var(--r-sm);
+    cursor: pointer;
+    transition: background var(--dur-fast) var(--ease);
+  }
+  .toc-toggle:hover { background: rgba(40, 30, 20, 0.05); }
+  .toc-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .toc-toggle .ic-line {
+    height: 1.5px;
+    width: 100%;
+    background: var(--ink-2);
+    border-radius: 2px;
+    transition: background var(--dur-fast) var(--ease);
+  }
+  /* Keep the hamburger glyph in BOTH states (no ×, which reads as "close the page").
+     The "open" cue is a subtle background tint + slightly darker lines. */
+  body.toc-open .toc-toggle { background: rgba(40, 30, 20, 0.08); }
+  body.toc-open .toc-toggle .ic-line { background: var(--ink); }
+
+  .toc {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: var(--header-h);
+    bottom: 0;
+    width: var(--toc-w);
+    padding: var(--s5) var(--s4);
+    background: var(--paper);
+    border-right: 1px solid var(--hairline);
+    transform: translateX(-100%);
+    transition: transform var(--dur) var(--ease);
+    z-index: 4;                 /* below the sticky header (5), above content */
+    overflow-y: auto;
+  }
+  body.toc-open .toc { transform: translateX(0); }
+
+  .toc-heading {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: var(--s3);
+    padding-left: var(--s2);
+  }
+  .toc-list { display: flex; flex-direction: column; gap: 1px; }
+  .toc-item {
+    text-align: left;
+    background: transparent;
+    border: 0;
+    border-left: 2px solid transparent;   /* GRAYSCALE active indicator -- accent stays verify-only */
+    cursor: pointer;
+    font: 400 13px/1.45 var(--font-body);
+    color: var(--ink-3);
+    padding: var(--s2);
+    border-radius: 0 var(--r-sm) var(--r-sm) 0;
+    transition: color var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease);
+  }
+  .toc-item:hover { color: var(--ink-2); background: rgba(40, 30, 20, 0.035); }
+  .toc-item.is-active {
+    color: var(--ink);
+    font-weight: 600;
+    border-left-color: var(--ink-3);
+    background: rgba(40, 30, 20, 0.04);
+  }
+  .toc-item:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+  /* the reflow-push: anchor the content just past the ToC (a comfortable ~40px gap = s4 margin
+     + the s5 reading inset), NOT pushed by the centered gutter. margin-left is a length in both
+     states, so it transitions smoothly and never leaves a huge void on wide screens. */
+  .layout { transition: margin-left var(--dur) var(--ease); }
+  body.toc-open .layout { margin-left: calc(var(--toc-w) + var(--s4)); }
+}
+
+/* ---- Responsive + reduced motion -------------------------------------------------- */
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; gap: var(--s5); }
+  .notes { max-width: none; }
+  .verify-col { position: static; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

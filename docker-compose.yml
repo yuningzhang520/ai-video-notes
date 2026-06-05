@@ -1,0 +1,18 @@
+# One-command setup:  docker compose up --build   ->  http://localhost:8000
+#
+# Single service: the FastAPI app serving the API + static reader + the committed demo note.
+# Runtime reads committed artifacts only — no Anthropic, no YouTube, no API keys needed.
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+    healthcheck:
+      # python is in the image (python:3.11-slim); curl/wget are not — so probe via urllib.
+      test: ["CMD", "python", "-c", "import urllib.request, sys; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:8000/healthz').status == 200 else 1)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s

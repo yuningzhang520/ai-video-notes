@@ -1,0 +1,1079 @@
+{
+  "video": {
+    "id": "GDm_uH6VxPY",
+    "title": "AI agent design patterns",
+    "url": "https://www.youtube.com/watch?v=GDm_uH6VxPY",
+    "durationSec": 501
+  },
+  "frames": [
+    {
+      "id": "frame-0001",
+      "timestampSec": 3.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0001.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0002",
+      "timestampSec": 13.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0002.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0003",
+      "timestampSec": 15.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0003.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0004",
+      "timestampSec": 41.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0004.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0005",
+      "timestampSec": 49.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0005.jpg",
+      "ocrText": "What we will cover today\n+ Single agent\n'* Sequential agent\n+* Sequential with parallel agont",
+      "visionDescription": "On-screen text extracted by Claude vision (model claude-sonnet-4-6)."
+    },
+    {
+      "id": "frame-0006",
+      "timestampSec": 55.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0006.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0007",
+      "timestampSec": 57.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0007.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0008",
+      "timestampSec": 59.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0008.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0009",
+      "timestampSec": 61.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0009.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0010",
+      "timestampSec": 67.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0010.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0011",
+      "timestampSec": 69.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0011.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0012",
+      "timestampSec": 75.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0012.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0013",
+      "timestampSec": 87.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0013.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0014",
+      "timestampSec": 89.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0014.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0015",
+      "timestampSec": 91.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0015.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0016",
+      "timestampSec": 93.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0016.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0017",
+      "timestampSec": 95.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0017.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0018",
+      "timestampSec": 97.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0018.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0019",
+      "timestampSec": 99.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0019.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0020",
+      "timestampSec": 103.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0020.jpg",
+      "ocrText": "\u00ae day_trippy MX \u2014 @ _init_py Dy +O\n\u2018single agent > \u00ae day.trip py > Ce? root_agent\n6\nroot_agent = Agent(\nfhame=\"planner_agent\",\nmmodel=\"genini-2.5-flash\",\ndescription=\"agent tasked with generating creative and fun dating plan suggestions\",\nAnstruction=!\nYou are a specialized AI assistant tasked with generating creative and fun plan suggestions.\nRequest:\nFor the upcoming weekend, specifically from ++{STARTDATE_YYYY-01-DDl+ to +#(END_DATE_VYYY-\u00a5\"\nConstraints and Guidelines for Suggestions:\n1. Creativity & Fun: Plans should be engaging, nesorable, and offer a good experience for 2\n2. Budget: ALL generated plans should ain for a moderate budget (conceptuatly \"$$\"), meaning\n3. Interest AUignnent:\nConsider the foltowing user interests: se+{COMMA SEPARATED_LIST_OF INTERESTS, \u20ac.9-, oUt\nFallback: Tf specific events or venues perfectly satching alt listed user interests cai\nCurrent & Specific: Prioritize finding specific, current events, festivals, pop-ups, or vi\nLocation Details: For each place or event mentioned within @ plan, you MUST provide its n\nMaximum Activities: The plan must contain a naxinun of 3 distinct activities.\nRETURN PLAN in MARKDOWN FORMAT.",
+      "visionDescription": "On-screen code extracted by Claude vision (model claude-sonnet-4-6)."
+    },
+    {
+      "id": "frame-0021",
+      "timestampSec": 107.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0021.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0022",
+      "timestampSec": 113.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0022.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0023",
+      "timestampSec": 117.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0023.jpg",
+      "ocrText": "sete\nplana tito San Francisco.\n1 Sovcation\nHover pte. se\nsce\n>\noffering ach sensory experience thats both fun and uni\n1 nde: 37248 (pprox for Lari eet Tendrie)\n1 Kanata: 12279 fppox for akin Set n Tender)\n1 eserpton: Aine coebran eaturng atonal danen mui oa anno\n2. Marvel athe Supe Bow! LX Projection show athe Ferry Bling\n\u2018acer scons on Fria hans the eo Fer Sung fr aly suring exes\n\u2018St xweeten Tha ery Tema Bung whet Suge Eon Prjecton Show art\n\u2018tats ou drew 6 er Supt Bo Nistor Tha He eve prove 0 mogeal buco\n\u2018oenborcedera winbeattl Ga ews\nNames Gol LX recon Show at Fey Trial ing\ntua 7956\nnat: 2392\n+ Seen: fsa otro hier Fay Bug he\n4. Teka Scie Glden Gat Bay Cruse\n\u2018a Sy emery else San Franco abet ith olen Gate By ron. De\n\u2018pe how cle crs breatatng ves you sl alg te cys mtr pss ude\n\u2018ice he rtonus scarred Ey tomate coreerary ean ou fel\n+ Mame: Golden Gat ay Ce ed ond hte Ft)\n{atta 38098,\n1 Lente: 2416 apr or ee 4 V2 st Faber)\n1 eerpton A cuss hour boat ram Faherans Wht aang sunning ew\n\u2018ise rd on he San rca sre\n\u00a9 orate actives Sn rancscowediand San Franco eens abut",
+      "visionDescription": "On-screen diagram extracted by Claude vision (model claude-sonnet-4-6)."
+    },
+    {
+      "id": "frame-0024",
+      "timestampSec": 125.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0024.jpg",
+      "ocrText": "ince ante State atc\nplan tip to San Francisco *\n(0 Btretocd-<699-4400-4760-9ebatatsdoe\n1 Sovcation\nopen (ole ie\nBone\nwage\n>\noffering ach sensory experience thats both fun and unio\n1 tai: eat peor set eden)\n1 Kanata! 1222p for akin Set n Fender)\n1 eerpton kine carat etry atonal donen mas ad ander\n2.Marvl athe Supe Bow! LX Projection show atthe Ferry Bling\n\u2018ewe sence on fia hana the eo Fer Sung fra ait suring expen\n0k\n\u2018eats you teu 0 yer Supt Bo Mistry Th He ve roe 8 mega bac\nThe Enbarcadere wih baits.\n+ Name: spe on LX Projection Showa Fery Teri Bug\ntua 956\n1 Kango 223952\nRequest Response Graph",
+      "visionDescription": "On-screen diagram extracted by Claude vision (model claude-sonnet-4-6)."
+    },
+    {
+      "id": "frame-0025",
+      "timestampSec": 129.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0025.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0026",
+      "timestampSec": 133.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0026.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0027",
+      "timestampSec": 135.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0027.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0028",
+      "timestampSec": 139.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0028.jpg",
+      "ocrText": "\u201cFind a sushi restaurant in San Francisco\nCity that\u2019s open late and then find the\nfastest way to get there\u201d.",
+      "visionDescription": "On-screen text extracted by Claude vision (model claude-sonnet-4-6)."
+    },
+    {
+      "id": "frame-0029",
+      "timestampSec": 141.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0029.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0030",
+      "timestampSec": 143.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0030.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0031",
+      "timestampSec": 145.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0031.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0032",
+      "timestampSec": 155.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0032.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0033",
+      "timestampSec": 157.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0033.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0034",
+      "timestampSec": 165.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0034.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0035",
+      "timestampSec": 181.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0035.jpg",
+      "ocrText": "Single agent with tools (LLM)\nPros\n+ Simple mene:\n+ er todebon\n\u2018cons\n1 acge sytem prompt cn\n\u2018reer\n+ Shateglt ct ature",
+      "visionDescription": "On-screen text extracted by Claude vision (model claude-sonnet-4-6)."
+    },
+    {
+      "id": "frame-0036",
+      "timestampSec": 185.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0036.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0037",
+      "timestampSec": 189.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0037.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0038",
+      "timestampSec": 193.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0038.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0039",
+      "timestampSec": 195.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0039.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0040",
+      "timestampSec": 209.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0040.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0041",
+      "timestampSec": 217.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0041.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0042",
+      "timestampSec": 237.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0042.jpg",
+      "ocrText": "bi_sequential agent > @\n3\n2\n2B\nFy\nFs\n16\nFy\nFy\n19\n20\n2\n2\n23\n24\n25\n26\n27\n28\n2\n30\nat\n2\n3\nents.py > () Agent\nfoodie_agent = Agent(\ntools={googte_search),\ninstruction=\"\"\"'You are an expert food critic. Your goal is to find the best restaurant based on 9 ust\n(When you recomend a place, you must output sonlys the nane of the establishment and nothing else.\nFor exanple, if the best sushi is at \u2018Jin Sho\u2019, you should output only: Jin Sho\n\u2018output _key=\"destination\u201d # AOK will save the agent's final response to state[\u2018destination\u2019]\n)\n# The \u2018{destination}\u00ae placeholder is automaticatty filted by the ADK FRB the state.\n\u2018transportation agent = Agent(\nnane=\"*transportation_agent\u2122,\nrrodel=\"genini-2.5-fash,\ntools=Igo091e_searchi,\nAnstruction=\"\"\"You are a navigation assistant. Given a destination, provide clear directions.\n\u2018The user wants to go to: {destination}. >\n\u2018Analyze the user's full original query to find their starting point.\n\u2018Then, provide clear directions fFBH that starting point to {destination}.\n)",
+      "visionDescription": "On-screen code extracted by Claude vision (model claude-sonnet-4-6)."
+    },
+    {
+      "id": "frame-0043",
+      "timestampSec": 241.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0043.jpg",
+      "ocrText": "b_sequential agent > # agents.py > () Agent\n2\n2\n2a\n2s\n26\n28\n23\n32\nrs\n2\n33\n#\n35\n36\n7\n#\n39\n4\nat\n# The \u201ceestination}\u201d placenoler 4s autonatically filed by the ADK HBB the state.\n\u2018transportation agent = Agent(\ntane=\"transportation_agent\u2122,\nfodel=\"senini-2-5-flash,\ntools=[googte_searchl,\ninstruction=\"*\"You are a navigation assistant. Given 2 destination, provide clear directions.\nThe user wants to go to: {destination}.\n\u2018Analyze the user's full original query to find their starting point.\n\u2018Then, provide clear directions ##8H that starting point to {destination}.\n)\n# % CIUNGE 3: Define the SequentiotAgent to manage the workflow.\n2 This agent wii cun foodie agent, then transportation agent, in that exact order.\nfind_and_navigate agent = Sequentiatagent(\names\" Find_and_navigate_agent\",\nsub_agents=|foodie_agent, transportation_agent!,\ndescription=\"A workflow that first finds a location and then provides directions to it.\nroot_agent = find and_navigate_agent",
+      "visionDescription": "On-screen code extracted by Claude vision (model claude-sonnet-4-6)."
+    },
+    {
+      "id": "frame-0044",
+      "timestampSec": 243.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0044.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0045",
+      "timestampSec": 247.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0045.jpg",
+      "ocrText": "cc}\nsets >\nemphysema\n\u2018te rapt:\nitt ety srt tre mage aie vce ote ee\n\u2018ran howhans web ncescorcyaestcatona hone\n\"cman an opt a pen mo pe\n\u00a9 Saterdinmyasems Instat at",
+      "visionDescription": "On-screen text extracted by Claude vision (model claude-sonnet-4-6)."
+    },
+    {
+      "id": "frame-0046",
+      "timestampSec": 249.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0046.jpg",
+      "ocrText": "ace Events \u201cStato tifocte >\nFind a good sushi nibar Standford and telln.\nInvocation 1:\n6-990243b2-1096-Ab2e-bo69-4t\"932er1444\n19 Snvecotion \u2014\u2014_ionsine\nHK ogent.ron [4 sine\n# oamnt_ron Cs\n\u00a9 Pichyratnd sushrestawants Stanford best sushinears\n\u2018To.getto in Sho, aighy-ratod sushi restaurant from Stanford University\nstance within Pao Ato. in Shs ocated at 454 Catfrna Avenue, Palo\nfor Stanford Unverstys 450 Jane Stanford Way, Stanford, CA 94305.\nHere aro the eetions to Jin Sho fom Stanford Uniersiy-\nDriving Directions:\n1. Start at Stanford Univer, for example, rom 450 Jane Stanford\n2 head norieast on Jan Stari Way towards Pam De.\n3. Tumlatonto Pain Deve.\n4: Tonight onto University venue.\n5. Continue on University Avenue into downtown Pao Ato.\n6. Tun ight ento Catia Avenue\n7 Je Sha wilbe on your ight t 454 Califo venue,\n\u2018The dives ypcaly short, usualy around S-10 minutes depending on raf\nPublic Transportation Walking:\n\u2018Ove to the relatively short dstance, waking or cing are also viable opti\n\u2018campus. There might also be local bus services connecting Stanford 0 Cal\nIte recommended to use a navigation pp for el-tme trafic updates an\n@ stanford university aderess Jn Sho restaurant adress",
+      "visionDescription": "On-screen diagram extracted by Claude vision (model claude-sonnet-4-6)."
+    },
+    {
+      "id": "frame-0047",
+      "timestampSec": 253.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0047.jpg",
+      "ocrText": "Wace Events Stato tifacts >\nFind a good sushi near Standford and tein. ~\nInvocation:\nen7ab2ate2-tod6-dbe-besP-ate9a2ec84U8\n19 invocation iaten\nomentum (41-0\novert runs wenn\n[El contin wansene\novert run Co\nont\n(Bi comtte \u2018Ponte\n\u00a9 Fichyratnd sushi restaurants Stanford best sushinears\n\u2018To.getto sn Sho, aighy-ratod sushi restaurant rom Stanford University\nstance within Palo Ato. sn Sho ocated at 458 Calforna venue, Palo\nfer Stanford Unversiys 450 Jane Stanford Way, Stanford, CA 94305.\nHere are the rections to Jin Sho fom Stanford University:\nDriving Directions:\n1. Start at Stanford University for example, rom 450 Jane Stanford\n2. Head northeast on Jane Stanford Way towards Palm Drive.\n3. Tule ono Pain Dre,\n44 Tum ight onto UniveratyAvenve.\n5, Gontinge on University Avenue ito downtown Pao Ato,\n6. Tumsight onto Cafomia venue.\n7, Sa Showilbe on your ght t 454 California Avenue,\n\u2018The dive is ypcaly short, usualy around 5-10 minutes depending on raf\nPublic Transportation Walking:\n\u2018Due to the relatively short distance, waking or cing are als viable opto\ncampus. There might also be local bus services connecting Stanford a Cal\n{tis recommended to use navigation opp fr resl-ime trafic updates an\n\u00a9 stanford university ad\u00e9ress Jn Sho restaurant adress",
+      "visionDescription": "On-screen diagram extracted by Claude vision (model claude-sonnet-4-6)."
+    },
+    {
+      "id": "frame-0048",
+      "timestampSec": 259.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0048.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0049",
+      "timestampSec": 261.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0049.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0050",
+      "timestampSec": 263.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0050.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0051",
+      "timestampSec": 265.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0051.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0052",
+      "timestampSec": 267.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0052.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0053",
+      "timestampSec": 275.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0053.jpg",
+      "ocrText": "20 Sho MERE Foto Ait\n>\nJn Sho Resturant Palo Ako\n\u00a9 wopratedsushirestaurans StanfosA best sushi near\nSn Sh Restaurant Palo Ako\n@ \u2014wprated sushirestaurants Stanford A__best sushi near\nsin Sho Restaurant, highly-rated sushi establishment located at 484\n\u2018Calfomia 94208,\n\u2018To get there rom Stnford Universi, you can use a navigation app (uch\nInput in Sho Restaurant, 454 Calorie Avene, Palo AN\u201d as yout dost\nvihich's very cose to the Stanford campus.\n<n Sho is open on Tuesdays from 1:45 AM to 145 PM and from 530 Pt\n\u2018ad Sundays.\n\u00a9 _<irections trom Storford University to Jin Sho Restaurant Plo A",
+      "visionDescription": "On-screen text extracted by Claude vision (model claude-sonnet-4-6)."
+    },
+    {
+      "id": "frame-0054",
+      "timestampSec": 279.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0054.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0055",
+      "timestampSec": 285.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0055.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0056",
+      "timestampSec": 295.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0056.jpg",
+      "ocrText": "Multi-agent: Sequential (workflow)\ne\nPros\nMore prditabie een\nae tte debug\n\u2018on omer\ncone\nten srs on\ninten ms ger cous\nCort adip a epee niens\nyoure ten\nCoal lene (ube\nfon",
+      "visionDescription": "On-screen table extracted by Claude vision (model claude-sonnet-4-6)."
+    },
+    {
+      "id": "frame-0057",
+      "timestampSec": 301.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0057.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0058",
+      "timestampSec": 305.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0058.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0059",
+      "timestampSec": 307.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0059.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0060",
+      "timestampSec": 309.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0060.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0061",
+      "timestampSec": 311.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0061.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0062",
+      "timestampSec": 313.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0062.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0063",
+      "timestampSec": 315.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0063.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0064",
+      "timestampSec": 317.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0064.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0065",
+      "timestampSec": 319.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0065.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0066",
+      "timestampSec": 331.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0066.jpg",
+      "ocrText": "Multi-agent: Sequential with parallel (workflow)\naaa ot\nGB nt nee.s \u2018Oompa\noa ED we nowne ume?\ney om",
+      "visionDescription": "On-screen diagram extracted by Claude vision (model claude-sonnet-4-6)."
+    },
+    {
+      "id": "frame-0067",
+      "timestampSec": 365.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0067.jpg",
+      "ocrText": "See. eee\n\u2018b2_paralleL agent > @ agents.py > {) google.search\n5\n16\n7\nri\n19\n2\n2\n2\n2\n24\n25\n26\n2\n2\n2\n38\na\n2\n23\n4\n3%\nmae\nspecialist Agent 2 ;\n\u2018concert_finder_agent = Agent( ;\nnane=\"concert_finder_agent\", model=\"genini-2.5-flash\", tools=(google_searchl,,\nAnstruction=\"You are an events guide. Find a concert based on the user's query. Output only the conce\noutput_key=\"concert_result\u201d\n)\nWe can reuse our foodie.egent for the third parattel task!\n# Just need to give it a new output_key for this workflow.\n# restaurant _finder_agent = foodie_agent.copy (update={\"output Key\u2019\nrestaurant_finder_agent = Agent(\nnane=\"restaurant_finder_agent\",\nmodel=\"gemini-2.5-flash\u201d,\n\u2018tools=igoogle_search], b\ninstruction=\"\"\"You are an expert food critic. Your goal is to find the best restaurant based on 9 use\n'restaurant_result\"))\nWhen you recomend a place, you must output sonty\u00bb the nane of the establishment.\nFor exanple, if the best sushi 4s at \u2018Jin Sho', you should output only: 2in Sho\n\u2018output _key=\"restaurant result\u201d # Set the correct output key for this workflow",
+      "visionDescription": "On-screen code extracted by Claude vision (model claude-sonnet-4-6)."
+    },
+    {
+      "id": "frame-0068",
+      "timestampSec": 367.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0068.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0069",
+      "timestampSec": 371.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0069.jpg",
+      "ocrText": "Nitec peter ES illo at\n\u2018b2_paralleL_agent > @ agents:py > () google.search\n38\nFr)\n40\na\n3\na\n45\n46\n47\nPo\n9\nse\n51\n52\n33\nst\n55\n56\n57\n38\n59\nee\naratlel_research_agent = ParalletAgent(\nrnane=\"paratlel_research_agent\u2019\nsub_agents=|nuseun finder_agent, concert_finder_agent, restaurant_finder_agent)\n# Agent to synthesize the parallel results\nsynthesis agent = Agent(\nnane=\"'synthesis agent\", model=\"cenini-2.5-fash\",\nAnstruction=\"\"\"'You are a helpful assistant. Combine the following research results into a clear, but!\n~ Museum: {euseus result?\n= Concert: {concert result)\n= Restaurant: {restaurant_result}\n4% The Sequentiatagent runs the parsttel search,\nparaltel_planner_agent = SequentiaiAgent(\nnane=\"pareitel_planner_agent\u00ae,\nsub_agents=|paraltel_research agent, synthesis agent],\nthen the synthesis\ndescription=\"A workflow that finds sultiple things in parallel and then summarizes the results.\nPoot agent = parallel ntawieregen\u2019",
+      "visionDescription": "On-screen code extracted by Claude vision (model claude-sonnet-4-6)."
+    },
+    {
+      "id": "frame-0070",
+      "timestampSec": 373.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0070.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0071",
+      "timestampSec": 375.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0071.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0072",
+      "timestampSec": 377.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0072.jpg",
+      "ocrText": "Plan my tip to San Francisco, | want to fine 2\n>\n\\Caltoria Academy of Sciences\n@ _bectmuseums San Francisco\n\u2018Concert Name: Post Malone\n\u2018rts Post None\n\u00a9 sonFrancisco concerts February 2026 upcoming concert\n\u2018er Crenn\n@ Wichoknstarretaurants San Francico best restaurants\nHere are some suggestions for your rp to San Francisco\n+ Musou: Caifocra Academy of Sciences\n\u2018Concort Post Malone\n1 Restaurant: AaserCrenn",
+      "visionDescription": "On-screen diagram extracted by Claude vision (model claude-sonnet-4-6)."
+    },
+    {
+      "id": "frame-0073",
+      "timestampSec": 379.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0073.jpg",
+      "ocrText": "Plan my tip to San Francisco, want to fing =\ntrvocation 5\n#-9689575i-0o47-4027-96ed-748925990520\n1 sovocation sine\nA oaentun (po. 280\nHe ogent_run (soins\nF cao en eaten\nFB cont 2 sont\ncorte seasons\nfH cont oman\nHe eomt.c wt\nB cont\n& ogent run\nBoone\n#%\n>\n\\Caltoria Academy of Sciences\n@ best museums San Francisco\n\u2018Concert Name: Post Malone\n\u2018rts Post None\n\u00a9 sonFrancisco concerts February 2026 upcoming concert\n\u2018er Crenn\n@ Wichobnstarretaurants San Fancico best restaurants\nHere are some suggestions for your rp to San Francisco\n+ Musoum:Caifocra Academy of Sciences\n\u2018Concort Post Malone\n1 Restaurant: AaserCrenn",
+      "visionDescription": "On-screen diagram extracted by Claude vision (model claude-sonnet-4-6)."
+    },
+    {
+      "id": "frame-0074",
+      "timestampSec": 383.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0074.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0075",
+      "timestampSec": 387.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0075.jpg",
+      "ocrText": "\u00a9 dey_inp.py MM -@ agents.py x\n'b2_parallel_agent > @ agents:py > {) google.search\n2\nrr\na\n3\na\n15\n16\n7\n18\n6\nFf\n2\n2\n23\n24\n26\n2\n28\n23\n30\nsmuseun_finder_agent = Agent(\name=\"museue_tinger 9gent\u201d, moget=-gemini~Z->-riasi, toots=igoogte_searcni,\ninstruction=\"You are a museum expert. Find the best museum based on the user's query. Output only the\noutput_key=\"nuseus_cesult\u2122\n)\nF Specialist Agent 2\n\u2018concert_finder_agent = Agent(\nhnane=\"concert_finder_agent\", model=\"genini-2.5-flash\", tools=(google_search! ,\nAnstruction=\"You are an events guide. Find a concert based on the user's query. Output only the conce\n\u2018output _Key=\"concert_resuit\u201d S\n)\n\u00a5 Me can reuse our foodie agent for the third parallel taskt\nF Just need to give it a new output key for this workflow.\n# restaurant_finder_agent = foodie agent. copy (update=<\"output Key\":\nrestaurant_finder_agent = Agent(\nrane=\"estaurant_finder_agent\",\njenini-2.5-flash,\n\u201ccestaurant_result\"))\nnen you recommend 2 place, you must output *onlys the nane of the establishment.",
+      "visionDescription": "On-screen code extracted by Claude vision (model claude-sonnet-4-6)."
+    },
+    {
+      "id": "frame-0076",
+      "timestampSec": 389.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0076.jpg",
+      "ocrText": "\u00a9 cey_inp.pyM =P agents.py x\n\u2018b2_parallel_agent > # agents:py > (? googlesearch\n26\n2\n2\n8\n30\n3\nR\n3\nx\u201c\nry\n36\n0\n38\n38\n40\na\n43\n46\nrestaurant_finder_agent\njenini-2.5-flash\u00ae\n\u2018tools=(google_searchi,\nAnstruction=\"\"'You are an expert food critic. Your goal is to find the best restaurant\nAgent\nWhen you recomend a place, you must output sonlys the nase of the establishaent,\nFor example, if the best sushi is at \u2018Jin Sho', you should output only: Jin Sho\noutput_keye\"restaurant_result\u201d # Set the correct output key for this worktlow\n# The ParalteVagent runs alt three specialists at once +\nparallel_research_agent = Paraltelagent(\nrnane=\"paraltel_research agent\",\nsub_agents=(nuseun_finder_agent, concert_finder_agent, restaurant_finder_agent!\n)\n&\n# agent to synthesize the parallel results\nsynthesis_agent = Agent(\nnane=\"synthesis agent\", model=\"genini-2.5-flash\",\nAnstruction=\"\"\"'You are a helpful assistant. Combine the following research results into @ clear, bull",
+      "visionDescription": "On-screen code extracted by Claude vision (model claude-sonnet-4-6)."
+    },
+    {
+      "id": "frame-0077",
+      "timestampSec": 391.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0077.jpg",
+      "ocrText": "2 coy_inp.py MP agents.py Xx\n'b2_paralleL_agent > @ agents.py > {) google.search\n34\n6\n\u201d\n3\nrestaurant _finder_agent = Agent(\nOutput key=\"restaurant_result\u201d # Set the correct output Key tor this workt tow\n)\n4% The ParatletAgent runs all three specialists at once\nparallel_research_agent = ParaltetAgent(\n\u2018nane=\"paratlel research agent\",\nSub_agents=|nuseun_finder_agent, concert _finder_agent, restaurant _finder_agent)\n)\n# Agent to syathesize the parailel results\nsynthesis_agent = Agent(\nhnane=\"synthesis_agent\", model=\"genini-2.5-flash\",\ninstruction=\"*\"'You are a helpful assistant. Combine the following research results\n= Museun: nuseun result}\n~ Concert: {concert_result)\n~ Restaurant: (restaurant_resutt) is\n)\n4% The Sequentiatagent runs the parallel search, then the synthesis 3\nparaltel_planner_agent = Sequentialagent(\ninto a clear, but!",
+      "visionDescription": "On-screen code extracted by Claude vision (model claude-sonnet-4-6)."
+    },
+    {
+      "id": "frame-0078",
+      "timestampSec": 395.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0078.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0079",
+      "timestampSec": 401.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0079.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0080",
+      "timestampSec": 403.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0080.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0081",
+      "timestampSec": 411.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0081.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0082",
+      "timestampSec": 415.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0082.jpg",
+      "ocrText": "Multi-agent: Sequential with parallel (workflow)\nros cons\nLowertry get nn het tana\nrote test mot) eoengeons ase ace\n+i gein benefit Seal\nsoar ope: peckob ay reestn comping\nay on rrr to ebay",
+      "visionDescription": "On-screen table extracted by Claude vision (model claude-sonnet-4-6)."
+    },
+    {
+      "id": "frame-0083",
+      "timestampSec": 429.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0083.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0084",
+      "timestampSec": 455.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0084.jpg",
+      "ocrText": "Wrap up\n+ Single agent: Simple and\nflexible, but lack certain control.\n'* Sequential agent: More reliable,\nless flexible.\n+ Parallel agent: Fast and efficient,\nbut add cost and complexity\nParte agent\n000",
+      "visionDescription": "On-screen text extracted by Claude vision (model claude-sonnet-4-6)."
+    },
+    {
+      "id": "frame-0085",
+      "timestampSec": 461.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0085.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0086",
+      "timestampSec": 469.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0086.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0087",
+      "timestampSec": 473.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0087.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0088",
+      "timestampSec": 477.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0088.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0089",
+      "timestampSec": 479.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0089.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0090",
+      "timestampSec": 481.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0090.jpg",
+      "ocrText": "Next video\n+ The loop & critic pattern for self-correction.\n+ The coordinator pattern for dynamic routing.\n+ Agent asa tool.",
+      "visionDescription": "On-screen text extracted by Claude vision (model claude-sonnet-4-6)."
+    },
+    {
+      "id": "frame-0091",
+      "timestampSec": 483.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0091.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0092",
+      "timestampSec": 485.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0092.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    },
+    {
+      "id": "frame-0093",
+      "timestampSec": 499.0,
+      "imagePath": "/static/demo/GDm_uH6VxPY/frames/frame-0093.jpg",
+      "ocrText": null,
+      "visionDescription": null
+    }
+  ],
+  "sections": [
+    {
+      "id": "series-overview",
+      "title": "Series Overview and Episode Scope",
+      "gist": "This episode introduces three foundational agentic design patterns with code examples and live demos, as part of a broader series.",
+      "bullets": [
+        {
+          "text": "The series teaches how to build agentic solutions ranging from a single agent up to various multi-agent patterns, with each episode providing practical code examples and live demos.",
+          "anchor": {
+            "kind": "transcript",
+            "timestampSec": 32.6,
+            "frameRef": "",
+            "transcriptText": "And by the end of this\nagentic pattern series, you will learn how to\nbuild agentic solution from single agent pattern to\ndifferent multi-agent pattern."
+          },
+          "blocks": []
+        },
+        {
+          "text": "Today's episode covers three patterns \u2014 single agent, sequential agent, and parallel agent \u2014 while the next episode will cover the orchestrator pattern, review-and-critique with loop agent, and agent-as-tool.",
+          "anchor": {
+            "kind": "frame",
+            "timestampSec": 46.0,
+            "frameRef": "frame-0005",
+            "transcriptText": null
+          },
+          "blocks": [
+            {
+              "type": "text",
+              "content": "**What we will cover today**\n\n- Single agent\n- Sequential agent\n- Sequential with parallel agent",
+              "frameRef": "frame-0005",
+              "confidence": "high"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "single-agent-pattern",
+      "title": "Single Agent Pattern",
+      "gist": "A single agent uses one LLM with tools and a prompt to handle multi-step tasks, but becomes unreliable as complexity grows.",
+      "bullets": [
+        {
+          "text": "In the single agent pattern, you give one agent a set of tools (e.g., Google Search) and a comprehensive system prompt describing how to accomplish the task; the agent relies on the model's own reasoning to determine the sequence of steps.",
+          "anchor": {
+            "kind": "transcript",
+            "timestampSec": 84.79,
+            "frameRef": "",
+            "transcriptText": "So you will write a\ncomprehensive prompt telling the agent how to plan\nthe trip using the search tool, so the agent then relies on the\nmodel's reasoning capability"
+          },
+          "blocks": []
+        },
+        {
+          "text": "The ADK (Agent Development Kit) makes the single agent straightforward to implement in code, and the ADK Web UI allows live testing where tracing confirms the agent uses its tools in a single pass.",
+          "anchor": {
+            "kind": "frame",
+            "timestampSec": 100.0,
+            "frameRef": "frame-0020",
+            "transcriptText": null
+          },
+          "blocks": [
+            {
+              "type": "code",
+              "content": "```python\nroot_agent = Agent(\n    name=\"planner_agent\",\n    model=\"gemini-2.5-flash\",\n    description=\"Agent tasked with generating creative and fun dating plan suggestions\",\n    instruction=\"\"\"\n        You are a specialized AI assistant tasked with generating creative and fun plan suggestions.\n\n        Request:\n        For the upcoming weekend, specifically from **[START_DATE_YYYY-MM-DD]** to **[END_DATE_YYYY-M\n\n        Constraints and Guidelines for Suggestions:\n        1. Creativity & Fun: Plans should be engaging, memorable, and offer a good experience for a\n        2. Budget: All generated plans should aim for a moderate budget (conceptually \"$$\"), meaning\n        3. Interest Alignment:\n               Consider the following user interests: **[COMMA_SEPARATED_LIST_OF_INTERESTS, e.g., out\n               Fallback: If specific events or venues perfectly matching all listed user interests ca\n        4. Current & Specific: Prioritize finding specific, current events, festivals, pop-ups, or u\n        5. Location Details: For each place or event mentioned within a plan, you MUST provide its n\n        6. Maximum Activities: The plan must contain a maximum of 3 distinct activities.\n\n        RETURN PLAN in MARKDOWN FORMAT\n    \"\"\"\n)\n```",
+              "frameRef": "frame-0020",
+              "confidence": "med"
+            }
+          ]
+        },
+        {
+          "text": "When the query is demonstrated live ('plan a trip to San Francisco'), the ADK trace panel shows the agent invoking the search tool and returning a result in one go.",
+          "anchor": {
+            "kind": "frame",
+            "timestampSec": 114.0,
+            "frameRef": "frame-0023",
+            "transcriptText": null
+          },
+          "blocks": [
+            {
+              "type": "diagram",
+              "content": "## ADK Web UI - Trace Panel + Agent Response\n\n### Left Panel: Invocations\n- Input: `plan a trip to San Francisco`\n- **Invocation ID:** e-8f9efac3-c539-4d88-87b8-98b428a6adbe\n  - `invocation` \u2014 25190.50ms\n    - `agent_run [pla...]` \u2014 25180.60ms\n      - `call_llm` \u2014 20186.74ms\n\n### Right Panel: Agent Response (San Francisco Trip Plan)\n1. **SF's Vietnamese New Year Tet Festival**\n   - Latitude: 37.784 (approx. for Larkin Street in Tenderloin)\n   - Longitude: -122.4172 (approx. for Larkin Street in Tenderloin)\n   - Description: A lively celebration featuring traditional dances, music, food, and vendors\n\n2. **Marvel at the Super Bowl LX Projection Show at the Ferry Building**\n   - Name: Super Bowl LX Projection Show at Ferry Terminal Building\n   - Latitude: 122.3932\n   - Description: A free, special visual display projected onto the historic Ferry Building\n\n3. **Take a Scenic Golden Gate Bay Cruise**\n   - Name: Golden Gate Bay Cruise (Red and White Fleet)\n   - Latitude: 37.8095\n   - Longitude: 122.416 (approx. for Pier 43 1/2 at Fisherman's Wharf)\n   - Description: A classic 1-hour boat tour from Fisherman's Wharf",
+              "frameRef": "frame-0023",
+              "confidence": "med"
+            },
+            {
+              "type": "diagram",
+              "content": "## Agent Tracing View\n\n**Invocation:** `plan a trip to San Francisco`\n\n- Invocation ID: `e-8f9efac3-c539-4d08-87b8-98b428a6adbe`\n  - **invocation**\n    - `agent_run [pla...]` \u2014 25190.50ms\n      - `call_llm` \u2014 25164.74ms\n\n**Event/Request/Response/Graph tabs visible at bottom**\n\n**Response content (partial):**\n```\ncontent:\n  parts:\n    0:\n      text: \"For your upcoming weekend getaway to San Francisco from February 7, 202...\n             dating plan designed to be creative, fun, and moderately budgeted, capturing\n             Weekend: Festive Culture & Bay Views This plan combines vibrant local festi...\"\n```\n\n**Right panel shows event recommendations:**\n1. SF's Vietnamese New Year Tet Festival\n   - Latitude: 37.7844\n   - Longitude: -122.4172\n2. Marvel at the Super Bowl LX Projection Show at the Ferry Building\n   - Name: Super Bowl LX Projection Show at Ferry Terminal Building\n   - Latitude: 37.7955\n   - Longitude: -122.3932",
+              "frameRef": "frame-0024",
+              "confidence": "med"
+            }
+          ]
+        },
+        {
+          "text": "For complex, multi-step requests (e.g., find a late-night sushi restaurant AND find the fastest route), encoding all logic in a single system prompt leads to unreliable behavior because LLMs are non-deterministic and cannot guarantee perfect multi-step adherence every time.",
+          "anchor": {
+            "kind": "frame",
+            "timestampSec": 136.0,
+            "frameRef": "frame-0028",
+            "transcriptText": null
+          },
+          "blocks": [
+            {
+              "type": "text",
+              "content": "\"Find a sushi restaurant in San Francisco City that's open late and then find the fastest way to get there\".",
+              "frameRef": "frame-0028",
+              "confidence": "high"
+            }
+          ]
+        },
+        {
+          "text": "The single agent pattern is simple to implement, easy to debug, and low-latency, making it great for straightforward tasks; its main weakness is lack of control and reliability as task complexity increases.",
+          "anchor": {
+            "kind": "frame",
+            "timestampSec": 178.0,
+            "frameRef": "frame-0035",
+            "transcriptText": null
+          },
+          "blocks": [
+            {
+              "type": "text",
+              "content": "## Single agent with tools (LLM)\n\n**Pros** \u2705\n- Simple to implement\n- Easier to **debug**\n- Low **latency**\n\n**Cons** \u274c\n- Large system prompt can become unwieldy\n- **Harder to re-use** individual components\n- Single point of **failure**",
+              "frameRef": "frame-0035",
+              "confidence": "high"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sequential-agent-pattern",
+      "title": "Sequential Agent Pattern",
+      "gist": "The sequential agent breaks complex tasks into ordered sub-agents that pass results through shared session state, adding control and predictability at the cost of flexibility.",
+      "bullets": [
+        {
+          "text": "The sequential agent pattern is the first multi-agent pattern and is suited to highly structured, repeatable workflows where order is fixed \u2014 the output of one sub-agent becomes the direct input to the next, like an assembly line.",
+          "anchor": {
+            "kind": "transcript",
+            "timestampSec": 198.91,
+            "frameRef": "",
+            "transcriptText": "And this pattern is for highly\nstructured, repeatable task, because the order of\nthe operation is fixed. So the output of one subagent\nbecomes the direct input"
+          },
+          "blocks": []
+        },
+        {
+          "text": "For the trip-planning example, the task is split into two specialized sub-agents \u2014 a food-finding agent followed by a transportation agent \u2014 guaranteeing the food result is always found before routing is computed.",
+          "anchor": {
+            "kind": "frame",
+            "timestampSec": 234.0,
+            "frameRef": "frame-0042",
+            "transcriptText": null
+          },
+          "blocks": [
+            {
+              "type": "code",
+              "content": "```python\nfoodie_agent = Agent(\n    tools=[google_search],\n    instruction=\"\"\"You are an expert food critic. Your goal is to find the best restaurant based on a us\n\n    When you recommend a place, you must output *only* the name of the establishment and nothing else.\n    For example, if the best sushi is at 'Jin Sho', you should output only: Jin Sho\n    \"\"\",\n    output_key=\"destination\"  # ADK will save the agent's final response to state['destination']\n)\n\n# The '{destination}' placeholder is automatically filled by the ADK from the state.\ntransportation_agent = Agent(\n    name=\"transportation_agent\",\n    model=\"gemini-2.5-flash\",\n    tools=[google_search],\n    instruction=\"\"\"You are a navigation assistant. Given a destination, provide clear directions.\n    The user wants to go to: {destination}.\n\n    Analyze the user's full original query to find their starting point.\n    Then, provide clear directions from that starting point to {destination}.\n    \"\"\",\n)\n```",
+              "frameRef": "frame-0042",
+              "confidence": "high"
+            },
+            {
+              "type": "code",
+              "content": "```python\n# The `{destination}` placeholder is automatically filled by the ADK from the state.\ntransportation_agent = Agent(\n    name=\"transportation_agent\",\n    model=\"gemini-2.5-flash\",\n    tools=[google_search],\n    instruction=\"\"\"You are a navigation assistant. Given a destination, provide clear directions.\nThe user wants to go to: {destination}.\n\nAnalyze the user's full original query to find their starting point.\nThen, provide clear directions from that starting point to {destination}.\n\"\"\",\n)\n\n# \u2728 CHANGE 3: Define the SequentialAgent to manage the workflow.\n# This agent will run foodie_agent, then transportation_agent, in that exact order.\nfind_and_navigate_agent = SequentialAgent(\n    name=\"find_and_navigate_agent\",\n    sub_agents=[foodie_agent, transportation_agent],\n    description=\"A workflow that first finds a location and then provides directions to it.\"\n)\n\nroot_agent = find_and_navigate_agent\n```",
+              "frameRef": "frame-0043",
+              "confidence": "high"
+            }
+          ]
+        },
+        {
+          "text": "The ADK Web UI trace confirms sequential execution: the food agent fires first and the transportation agent fires second, with the invocation tree making the order visually explicit.",
+          "anchor": {
+            "kind": "frame",
+            "timestampSec": 246.0,
+            "frameRef": "frame-0046",
+            "transcriptText": null
+          },
+          "blocks": [
+            {
+              "type": "diagram",
+              "content": "# ADK Web UI - Trace Tab\n\n## Invocation Panel (left)\n- **Query:** \"Find a good sushi near Stanford and tell n...\"\n- **Invocation ID:** e-9302d3b2-1a36-4b2c-be69-4ff932cc1444\n- `\u2192 invocation` \u2014 13102.88ms\n  - `\ud83d\udeb6 agent_run [fi...` \u2014 13401.99ms\n  - `\ud83d\udeb6 agent_run [...` \u2014 8691.89ms\n\n## Chat Response Panel (right)\n- **Search tool calls shown:** `highly-rated sushi restaurants Stanford` | `best sushi near St...`\n- **Response:** Directions to Jin Sho restaurant at 454 California Avenue, Palo Alto (Stanford University's 450 Jane Stanford Way, Stanford, CA 94305)\n- **Driving Directions listed** (7 steps from Stanford University to Jin Sho)\n- **Public Transportation/Walking** section included\n- **Suggestion chips:** `Stanford University address` | `Jin Sho restaurant address`",
+              "frameRef": "frame-0046",
+              "confidence": "med"
+            },
+            {
+              "type": "diagram",
+              "content": "## ADK Tracing Invocation Tree\n\n**Query:** Find a good sushi near Stanford and tell me how to get there\n\n**Invocation ID:** e-9302d3b2-1a36-4b2c-be69-4ff932cc1444\n\n```\n\u2192 invocation                    13602.88ms\n    \ud83d\udeb6 agent_run [fi...]        13601.99ms\n        \ud83d\udeb6 agent_run [...]       8691.89ms\n            \ud83d\udcac coll_llm          8689.15ms\n        \ud83d\udeb6 agent_run [...]       4909.63ms\n            \ud83d\udcac coll_llm          4908.16ms\n```\n\n**Response (right panel):**\n- Web search calls: \"highly-rated sushi restaurants Stanford\" | \"best sushi near St...\"\n- Result: Jin Sho restaurant at 454 California Avenue, Palo Alto, CA 94305\n- Driving Directions from Stanford University provided (steps 1-7)\n- Public Transportation/Walking options noted\n- Bottom chips: [Stanford University address] [Jin Sho restaurant address]",
+              "frameRef": "frame-0047",
+              "confidence": "med"
+            }
+          ]
+        },
+        {
+          "text": "Sub-agents communicate via a shared session state that acts as a scratchpad \u2014 the first agent writes its findings (e.g., the destination restaurant name) and the second agent reads that value using curly-brace placeholders in its system prompt, providing a form of short-term memory.",
+          "anchor": {
+            "kind": "frame",
+            "timestampSec": 272.0,
+            "frameRef": "frame-0053",
+            "transcriptText": null
+          },
+          "blocks": [
+            {
+              "type": "text",
+              "content": "**Session State (left panel):**\n```\ndestination: \"Jin Sho Restaurant Palo Alto\"\n```\n\n**Agent Chat Output (right panel):**\n\n- Jin Sho Restaurant Palo Alto\n  - \ud83d\udd0d top rated sushi restaurants Stanford CA | best sushi near St...\n\n- Jin Sho Restaurant Palo Alto\n  - \ud83d\udd0d top rated sushi restaurants Stanford CA | best sushi near St...\n\n- Jin Sho Restaurant, a highly-rated sushi establishment, is located at 454 Ca... California 94306.\n  To get there from Stanford University, you can use a navigation app (such as...) input \"Jin Sho Restaurant, 454 California Avenue, Palo Alto\" as your destina... which is very close to the Stanford campus.\n  Jin Sho is open on Tuesdays from 11:45 AM to 1:45 PM and from 5:30 PM to... and Sundays.\n  - \ud83d\udd0d directions from Stanford University to Jin Sho Restaurant Palo Alto",
+              "frameRef": "frame-0053",
+              "confidence": "med"
+            }
+          ]
+        },
+        {
+          "text": "A live demo shows the food agent finding 'Jin Sho Restaurant Palo Alto', writing it to session state, which is then consumed by the transportation agent to generate directions.",
+          "anchor": {
+            "kind": "frame",
+            "timestampSec": 244.0,
+            "frameRef": "frame-0045",
+            "transcriptText": null
+          },
+          "blocks": [
+            {
+              "type": "text",
+              "content": "**Chat conversation in ADK Web UI showing directions to Jin Sho restaurant:**\n\n**User queries:** highly-rated sushi restaurants Stanford | best sushi near Stanford\n\n**Agent response:**\nTo get to Jin Sho, a highly-rated sushi restaurant, from Stanford University, you'll need to travel a short distance within Palo Alto. Jin Sho is located at 454 California Avenue, Palo Alto, CA 94306. The main address for Stanford University is 450 Jane Stanford Way, Stanford, CA 94305.\n\nHere are the directions to Jin Sho from Stanford University:\n\n**Driving Directions:**\n1. Start at Stanford University, for example, from 450 Jane Stanford Way, Stanford, CA.\n2. Head northeast on Jane Stanford Way towards Palm Drive.\n3. Turn left onto Palm Drive.\n4. Turn right onto University Avenue.\n5. Continue on University Avenue into downtown Palo Alto.\n6. Turn right onto California Avenue.\n7. Jin Sho will be on your right at 454 California Avenue.\n\nThe drive is typically short, usually around 5\u201310 minutes depending on traffic.\n\n**Public Transportation/Walking:**\nDue to the relatively short distance, walking or cycling are also viable options if you're close to the edge of campus. There might also be local bus services connecting Stanford to California Avenue.\n\nIt is recommended to use a navigation app for real-time traffic updates and the most precise route.\n\n**Follow-up chips:** Stanford University address | Jin Sho restaurant address",
+              "frameRef": "frame-0045",
+              "confidence": "med"
+            }
+          ]
+        },
+        {
+          "text": "The sequential pattern offers high control and predictability compared to a single agent, but its rigid predefined structure makes it inflexible and unable to adapt to dynamic situations.",
+          "anchor": {
+            "kind": "frame",
+            "timestampSec": 292.0,
+            "frameRef": "frame-0056",
+            "transcriptText": null
+          },
+          "blocks": [
+            {
+              "type": "table",
+              "content": "## Multi-agent: Sequential (workflow)\n\n| \u2705 Pros | \u274c Cons |\n|--------|--------|\n| More predictable execution | Inflexible (can't skip steps like an LLM-driven multi agent could. Can't adapt to edge cases unless you hardcode them) |\n| Easier to test and debug | Cumulative latency (sub-agent B must wait for sub-agent A to finish) |\n| Fewer LLM calls \u2192 lower latency, lower costs | |",
+              "frameRef": "frame-0056",
+              "confidence": "high"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parallel-agent-pattern",
+      "title": "Parallel Agent Pattern",
+      "gist": "The parallel agent pattern runs multiple independent specialist agents simultaneously to reduce latency, then combines their results with a sequential aggregator step.",
+      "bullets": [
+        {
+          "text": "When tasks are independent of each other (e.g., finding a museum, a concert, and a restaurant for one trip), running them sequentially is slow; the parallel agent pattern solves this by launching all specialist agents concurrently.",
+          "anchor": {
+            "kind": "frame",
+            "timestampSec": 328.0,
+            "frameRef": "frame-0066",
+            "transcriptText": null
+          },
+          "blocks": [
+            {
+              "type": "diagram",
+              "content": "## Multi-agent: Sequential with parallel (workflow)\n\n**Nodes and connections:**\n\n- `Input` \u2192 [Parallel agent block containing:]\n  - `sub_agents_1` \u2192 `Output_1`\n  - `sub_agents_2` \u2192 `Output_2`\n  - `sub_agents_3` \u2192 `Output_3`\n\nAll three sub-agents receive input from `Input` simultaneously (parallel execution), each producing their own independent output.",
+              "frameRef": "frame-0066",
+              "confidence": "high"
+            }
+          ]
+        },
+        {
+          "text": "A common and recommended architecture is to combine parallel and sequential patterns: first run all search agents in parallel, then pass their aggregated session state to a final sequential aggregator agent that synthesizes a single cohesive trip plan.",
+          "anchor": {
+            "kind": "transcript",
+            "timestampSec": 348.9,
+            "frameRef": "",
+            "transcriptText": "So a common approach, is combine\nthis with a sequential agent. So first, we will run\nthe search in parallel."
+          },
+          "blocks": []
+        },
+        {
+          "text": "In ADK, a ParallelAgent is constructed by passing a list of sub-agents (museum_finder_agent, concert_finder_agent, restaurant_finder_agent); each sub-agent writes its result to session state using an output_key parameter.",
+          "anchor": {
+            "kind": "frame",
+            "timestampSec": 362.0,
+            "frameRef": "frame-0067",
+            "transcriptText": null
+          },
+          "blocks": [
+            {
+              "type": "code",
+              "content": "```python\n    # Specialist Agent 2\n    concert_finder_agent = Agent(\n        name=\"concert_finder_agent\", model=\"gemini-2.5-flash\", tools=[google_search],\n        instruction=\"You are an events guide. Find a concert based on the user's query. Output only the conce\n        output_key=\"concert_result\"\n    )\n\n    # We can reuse our foodie_agent for the third parallel task!\n    # Just need to give it a new output_key for this workflow.\n    # restaurant_finder_agent = foodie_agent.copy(update={\"output_key\": \"restaurant_result\"})\n    restaurant_finder_agent = Agent(\n        name=\"restaurant_finder_agent\",\n        model=\"gemini-2.5-flash\",\n        tools=[google_search],\n        instruction=\"\"\"You are an expert food critic. Your goal is to find the best restaurant based on a use\n\n        When you recommend a place, you must output *only* the name of the establishment.\n        For example, if the best sushi is at 'Jin Sho', you should output only: Jin Sho\n        \"\"\",\n        output_key=\"restaurant_result\" # Set the correct output key for this workflow\n    )\n```",
+              "frameRef": "frame-0067",
+              "confidence": "high"
+            },
+            {
+              "type": "code",
+              "content": "```python\nparallel_research_agent = ParallelAgent(\n    name=\"parallel_research_agent\",\n    sub_agents=[museum_finder_agent, concert_finder_agent, restaurant_finder_agent]\n)\n\n# Agent to synthesize the parallel results\nsynthesis_agent = Agent(\n    name=\"synthesis_agent\", model=\"gemini-2.5-flash\",\n    instruction=\"\"\"You are a helpful assistant. Combine the following research results into a clear, bul\n    - Museum: {museum_result}\n    - Concert: {concert_result}\n    - Restaurant: {restaurant_result}\n    \"\"\"\n)\n\n# \u2728 The SequentialAgent runs the parallel search, then the synthesis \u2728\nparallel_planner_agent = SequentialAgent(\n    name=\"parallel_planner_agent\",\n    sub_agents=[parallel_research_agent, synthesis_agent],\n    description=\"A workflow that finds multiple things in parallel and then summarizes the results.\"\n)\n\nroot_agent = parallel_planner_agent\n```",
+              "frameRef": "frame-0069",
+              "confidence": "high"
+            }
+          ]
+        },
+        {
+          "text": "Each specialist agent (museum finder, restaurant finder) is individually defined with its own tools, instruction, and output_key so its result lands in the correct session state slot for the aggregator to read.",
+          "anchor": {
+            "kind": "frame",
+            "timestampSec": 384.0,
+            "frameRef": "frame-0075",
+            "transcriptText": null
+          },
+          "blocks": [
+            {
+              "type": "code",
+              "content": "```python\nmuseum_finder_agent = Agent(\n    name=\"museum_finder_agent\", model=\"gemini-2.5-flash\", tools=[google_search],\n    instruction=\"You are a museum expert. Find the best museum based on the user's query. Output only the\n    output_key=\"museum_result\"\n)\n\n# Specialist Agent 2\nconcert_finder_agent = Agent(\n    name=\"concert_finder_agent\", model=\"gemini-2.5-flash\", tools=[google_search],\n    instruction=\"You are an events guide. Find a concert based on the user's query. Output only the conce\n    output_key=\"concert_result\"\n)\n\n# We can reuse our foodie_agent for the third parallel task!\n# Just need to give it a new output_key for this workflow.\n# restaurant_finder_agent = foodie_agent.copy(update={\"output_key\": \"restaurant_result\"})\nrestaurant_finder_agent = Agent(\n    name=\"restaurant_finder_agent\",\n    model=\"gemini-2.5-flash\",\n    tools=[google_search],\n    instruction=\"\"\"You are an expert food critic. Your goal is to find the best restaurant based on a us\n\n    When you recommend a place, you must output *only* the name of the establishment.\n```",
+              "frameRef": "frame-0075",
+              "confidence": "med"
+            },
+            {
+              "type": "code",
+              "content": "```python\nrestaurant_finder_agent = Agent(\n    name=\"restaurant_finder_agent\",\n    model=\"gemini-2.5-flash\",\n    tools=[google_search],\n    instruction=\"\"\"You are an expert food critic. Your goal is to find the best restaurant based on a use\n\n    When you recommend a place, you must output *only* the name of the establishment.\n    For example, if the best sushi is at 'Jin Sho', you should output only: Jin Sho\n    \"\"\",\n    output_key=\"restaurant_result\"  # Set the correct output key for this workflow\n)\n\n\n# \u2728 The ParallelAgent runs all three specialists at once \u2728\nparallel_research_agent = ParallelAgent(\n    name=\"parallel_research_agent\",\n    sub_agents=[museum_finder_agent, concert_finder_agent, restaurant_finder_agent]\n)\n\n# Agent to synthesize the parallel results\nsynthesis_agent = Agent(\n    name=\"synthesis_agent\", model=\"gemini-2.5-flash\",\n    instruction=\"\"\"You are a helpful assistant. Combine the following research results into a clear, bull\n    # Museum: {museum_result}\n```",
+              "frameRef": "frame-0076",
+              "confidence": "high"
+            },
+            {
+              "type": "code",
+              "content": "```python\nrestaurant_finder_agent = Agent(\n    output_key=\"restaurant_result\"  # Set the correct output key for this workflow\n)\n\n# \u2728 The ParallelAgent runs all three specialists at once \u2728\nparallel_research_agent = ParallelAgent(\n    name=\"parallel_research_agent\",\n    sub_agents=[museum_finder_agent, concert_finder_agent, restaurant_finder_agent]\n)\n\n# Agent to synthesize the parallel results\nsynthesis_agent = Agent(\n    name=\"synthesis_agent\", model=\"gemini-2.5-flash\",\n    instruction=\"\"\"You are a helpful assistant. Combine the following research results into a clear, bul\n    - Museum: {museum_result}\n    - Concert: {concert_result}\n    - Restaurant: {restaurant_result}\n    \"\"\"\n)\n\n# \u2728 The SequentialAgent runs the parallel search, then the synthesis \u2728\nparallel_planner_agent = SequentialAgent(\n```",
+              "frameRef": "frame-0077",
+              "confidence": "high"
+            }
+          ]
+        },
+        {
+          "text": "The final ParallelAgent definition combines all three specialists, and the aggregator agent is defined separately to read from session state and generate the unified plan.",
+          "anchor": {
+            "kind": "frame",
+            "timestampSec": 368.0,
+            "frameRef": "frame-0069",
+            "transcriptText": null
+          },
+          "blocks": []
+        },
+        {
+          "text": "The ADK trace for the live demo shows all three sub-agents firing simultaneously, their results accumulating in session state, and then the summarizing agent consuming that state to produce the final output.",
+          "anchor": {
+            "kind": "frame",
+            "timestampSec": 374.0,
+            "frameRef": "frame-0072",
+            "transcriptText": null
+          },
+          "blocks": [
+            {
+              "type": "diagram",
+              "content": "## ADK Web UI \u2013 Trip Planning Agent Trace\n\n**Invocation:** \"Plan my trip to San Francisco, I want to find...\"\n\n**Three parallel searching agents (with Google search results):**\n\n1. **Museum Agent**\n   - Result: California Academy of Sciences\n   - Search query: `best museums San Francisco`\n\n2. **Concert Agent**\n   - Result: Concert Name: Post Malone / Artist: Post Malone\n   - Search queries: `San Francisco concerts February 2026` | `upcoming concerts`\n\n3. **Restaurant Agent**\n   - Result: Atelier Crenn\n   - Search queries: `Michelin star restaurants San Francisco` | `best restaurants in...`\n\n**Final Aggregator Agent Output:**\n> Here are some suggestions for your trip to San Francisco:\n> - **Museum:** California Academy of Sciences\n> - **Concert:** Post Malone\n> - **Restaurant:** Atelier Crenn",
+              "frameRef": "frame-0072",
+              "confidence": "high"
+            },
+            {
+              "type": "diagram",
+              "content": "## ADK Web UI - Trace View: Multi-Agent Trip Planner\n\n**Invocation tree (left panel):**\n- `invocation` (12657.01ms)\n  - `agent_run [pa...]` (12655.25ms)\n    - `agent_run [...]` (10687.94ms)\n      - `agent_run [...]` (5507.91ms)\n        - `coll_l...` (5506.62ms)\n      - `agent_run [...]` (10294.14ms)\n        - `coll_l...` (10277.32ms)\n      - `agent_run [...]` (10211.47ms)\n        - `coll_l...` (10210.03ms)\n    - `agent_run [...]` (1964)\n      - `coll_llm` (1964)\n\n**Chat results (right panel):**\n- California Academy of Sciences\n  - Google search: \"best museums San Francisco\"\n- Concert Name: Post Malone / Artist: Post Malone\n  - Google search: \"San Francisco concerts February 2026\" | \"upcoming concerts\"\n- Atelier Crenn\n  - Google search: \"Michelin star restaurants San Francisco\" | \"best restaurants in...\"\n- Final summary:\n  - Museum: California Academy of Sciences\n  - Concert: Post Malone\n  - Restaurant: Atelier Crenn",
+              "frameRef": "frame-0073",
+              "confidence": "med"
+            }
+          ]
+        },
+        {
+          "text": "The parallel pattern's main benefit is significantly reduced latency for independent subtasks; its drawbacks are higher token/cost usage (multiple agents run simultaneously) and added design complexity from the required gather-and-synthesize step.",
+          "anchor": {
+            "kind": "frame",
+            "timestampSec": 412.0,
+            "frameRef": "frame-0082",
+            "transcriptText": null
+          },
+          "blocks": [
+            {
+              "type": "table",
+              "content": "## Multi-agent: Sequential with parallel (workflow)\n\n| \u2705 Pros | \u274c Cons |\n|---|---|\n| Lower latency (agents run in parallel, instead of waiting) | Harder to manage dependencies and state (race condition risk) |\n| Still get the benefits of a sequential agent - predictable! | May result in computing resource contention between two parallel sub-agents |",
+              "frameRef": "frame-0082",
+              "confidence": "high"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wrap-up-and-next-episode",
+      "title": "Recap and Next Episode Preview",
+      "gist": "A concise comparison of all three patterns covered today closes the episode, with a preview of more advanced patterns coming next.",
+      "bullets": [
+        {
+          "text": "Single agent is simple and flexible but lacks control; sequential agent adds reliability and control but is inflexible; parallel agent is fast and efficient for independent tasks but increases cost and design complexity.",
+          "anchor": {
+            "kind": "frame",
+            "timestampSec": 452.0,
+            "frameRef": "frame-0084",
+            "transcriptText": null
+          },
+          "blocks": [
+            {
+              "type": "text",
+              "content": "## Wrap up\n\n- **Single agent:** Simple and flexible, but lack certain control.\n- **Sequential agent:** More reliable, less flexible.\n- **Parallel agent:** Fast and efficient, but add cost and complexity.",
+              "frameRef": "frame-0084",
+              "confidence": "high"
+            }
+          ]
+        },
+        {
+          "text": "The next episode will cover three more advanced patterns: the loop-and-critique pattern for self-correction, the coordinator/orchestrator pattern for dynamic routing, and using an agent as a tool.",
+          "anchor": {
+            "kind": "frame",
+            "timestampSec": 478.0,
+            "frameRef": "frame-0090",
+            "transcriptText": null
+          },
+          "blocks": [
+            {
+              "type": "text",
+              "content": "**Next video**\n\n- The **loop & critic pattern** for self-correction.\n- The **coordinator pattern** for dynamic routing.\n- Agent as a tool.",
+              "frameRef": "frame-0090",
+              "confidence": "high"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

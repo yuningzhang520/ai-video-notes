@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Verifiable Visual Notes</title>
+  <!-- Inline SVG favicon: gives an icon AND stops the browser requesting /favicon.ico (no more 404). -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%236ea8fe'/%3E%3Cpolygon points='6,4 6,12 12,8' fill='%230e1320'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Verifiable Visual Notes</div>
+    <div id="video-title" class="video-title">Loading...</div>
+    <div class="badge-fixture" title="Step 1A serves fixture data; no video has been processed.">fixture</div>
+  </header>
+
+  <main class="layout">
+    <!-- Left: the notes (scrolls) -->
+    <section id="notes" class="notes" aria-live="polite">
+      <div class="status" id="status">Starting job...</div>
+    </section>
+
+    <!-- Right: player + source-frame panel, co-resident so verify never hits the server -->
+    <aside class="verify-col">
+      <div class="player-wrap">
+        <div id="player"></div>
+      </div>
+      <div class="frame-panel" id="frame-panel">
+        <div class="frame-panel-empty" id="frame-empty">
+          Click a grounded claim to verify it: the player seeks to its timestamp
+          and the cited source frame appears here.
+        </div>
+        <figure class="frame-fig" id="frame-fig" hidden>
+          <img id="frame-img" alt="Cited source frame" />
+          <figcaption id="frame-cap"></figcaption>
+        </figure>
+      </div>
+    </aside>
+  </main>
+
+  <script src="/static/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pydantic>=2.6
+pillow>=10.0
+pytest>=8.0
+httpx>=0.27
+yt-dlp>=2024.0.0   # Step 3A ingest probe: YouTube fetch (ffmpeg is a system pkg, see Dockerfile)
+youtube-transcript-api>=1.0.0   # Step 3A transcript probe / fallback when host video download is bot-walled
+anthropic>=0.105.0   # Step 3B: Claude vision via the Messages API (image input)
+python-dotenv>=1.0.0   # Step 3B: load ANTHROPIC_API_KEY / ANTHROPIC_MODEL from .env for local runs
+imagehash>=4.3   # Step 4A frame selection: perceptual-hash dedup (build-time analysis only)
+pytesseract>=0.3.10   # Step 4A text gate: OCR via Tesseract (tesseract-ocr is a system pkg, see Dockerfile)

@@ -1,0 +1,842 @@
+{
+  "videoId": "GDm_uH6VxPY",
+  "videoUrl": "https://www.youtube.com/watch?v=GDm_uH6VxPY",
+  "segmentCount": 167,
+  "segments": [
+    {
+      "text": "[MUSIC PLAYING]",
+      "start": 0.0,
+      "duration": 2.47
+    },
+    {
+      "text": "ANNIE WANG: Hi, everyone.",
+      "start": 4.44,
+      "duration": 1.06
+    },
+    {
+      "text": "Welcome to this\nagentic pattern series.",
+      "start": 5.5,
+      "duration": 2.74
+    },
+    {
+      "text": "So if you're building\nwith AI, you probably",
+      "start": 8.24,
+      "duration": 2.56
+    },
+    {
+      "text": "wonder how to really\ndesign the agentic system.",
+      "start": 10.8,
+      "duration": 4.22
+    },
+    {
+      "text": "Sometimes you need\na single agent,",
+      "start": 15.02,
+      "duration": 2.46
+    },
+    {
+      "text": "and other times you need a whole\nteam of them working together.",
+      "start": 17.48,
+      "duration": 4.0
+    },
+    {
+      "text": "And today, we are diving into\nAI agent design patterns,",
+      "start": 21.48,
+      "duration": 4.24
+    },
+    {
+      "text": "and each pattern we're\ngoing to provide you",
+      "start": 25.72,
+      "duration": 2.2
+    },
+    {
+      "text": "with practical examples of code.",
+      "start": 27.92,
+      "duration": 2.18
+    },
+    {
+      "text": "And we're also going to\nwalk through a live demo.",
+      "start": 30.1,
+      "duration": 2.5
+    },
+    {
+      "text": "And by the end of this\nagentic pattern series,",
+      "start": 32.6,
+      "duration": 3.0
+    },
+    {
+      "text": "you will learn how to\nbuild agentic solution",
+      "start": 35.6,
+      "duration": 3.0
+    },
+    {
+      "text": "from single agent pattern to\ndifferent multi-agent pattern.",
+      "start": 38.6,
+      "duration": 3.94
+    },
+    {
+      "text": "And for today's\nepisode, we will focus",
+      "start": 42.54,
+      "duration": 2.06
+    },
+    {
+      "text": "on practical examples of\nsingle agent, sequential agent,",
+      "start": 44.6,
+      "duration": 4.36
+    },
+    {
+      "text": "and parallel agent.",
+      "start": 48.96,
+      "duration": 1.52
+    },
+    {
+      "text": "For next episode, we're going\nto cover orchestrator pattern,",
+      "start": 50.48,
+      "duration": 3.64
+    },
+    {
+      "text": "review and critique pattern with\nloop agent, and agent as tool.",
+      "start": 54.12,
+      "duration": 4.8
+    },
+    {
+      "text": "All right, let's dive in.",
+      "start": 58.92,
+      "duration": 2.12
+    },
+    {
+      "text": "So let's begin with the\nmost fundamental pattern,",
+      "start": 61.04,
+      "duration": 3.63
+    },
+    {
+      "text": "the single agent.",
+      "start": 64.67,
+      "duration": 1.32
+    },
+    {
+      "text": "Imagine you want to plan a trip.",
+      "start": 65.99,
+      "duration": 2.24
+    },
+    {
+      "text": "So with a single agent, you\nwant to give an instruction",
+      "start": 68.23,
+      "duration": 3.68
+    },
+    {
+      "text": "on how to use a tool.",
+      "start": 71.91,
+      "duration": 1.58
+    },
+    {
+      "text": "And we can have a set of tool,\nlike how to check the weather,",
+      "start": 73.49,
+      "duration": 3.72
+    },
+    {
+      "text": "check the traffic, and schedule.",
+      "start": 77.21,
+      "duration": 2.0
+    },
+    {
+      "text": "But for our example today,\nwe will simplify things",
+      "start": 79.21,
+      "duration": 3.18
+    },
+    {
+      "text": "with only Google Search tool.",
+      "start": 82.39,
+      "duration": 2.4
+    },
+    {
+      "text": "So you will write a\ncomprehensive prompt",
+      "start": 84.79,
+      "duration": 2.68
+    },
+    {
+      "text": "telling the agent how to plan\nthe trip using the search tool,",
+      "start": 87.47,
+      "duration": 3.78
+    },
+    {
+      "text": "so the agent then relies on the\nmodel's reasoning capability",
+      "start": 91.25,
+      "duration": 3.66
+    },
+    {
+      "text": "to figure out the\nsequence of steps.",
+      "start": 94.91,
+      "duration": 2.72
+    },
+    {
+      "text": "As you can see from the\nscreen, the code for this",
+      "start": 97.63,
+      "duration": 3.2
+    },
+    {
+      "text": "is very straightforward with\nADK Agent Development Kit.",
+      "start": 100.83,
+      "duration": 3.6
+    },
+    {
+      "text": "And let's test if it's ADK\nweb UI by typing ADK app.",
+      "start": 104.43,
+      "duration": 4.88
+    },
+    {
+      "text": "So if I type, plan a\ntrip to San Francisco,",
+      "start": 109.31,
+      "duration": 3.84
+    },
+    {
+      "text": "we can see in the tracing\nthat agent is using the search",
+      "start": 113.15,
+      "duration": 3.96
+    },
+    {
+      "text": "tool to gather all the necessary\ninformation in just one go.",
+      "start": 117.11,
+      "duration": 3.96
+    },
+    {
+      "text": "We can see how it\nis using the tool",
+      "start": 121.07,
+      "duration": 2.36
+    },
+    {
+      "text": "from the tracing tab over here.",
+      "start": 123.43,
+      "duration": 1.99
+    },
+    {
+      "text": "However, this works for single\ntask, but as you have more tools",
+      "start": 125.42,
+      "duration": 4.36
+    },
+    {
+      "text": "or the tasks are\ngetting more complex,",
+      "start": 129.78,
+      "duration": 2.36
+    },
+    {
+      "text": "for example, if I have a\nrequest finding a sushi",
+      "start": 132.14,
+      "duration": 3.28
+    },
+    {
+      "text": "in San Francisco\nthat's open late",
+      "start": 135.42,
+      "duration": 2.04
+    },
+    {
+      "text": "and finding the fastest\nway getting there.",
+      "start": 137.46,
+      "duration": 2.3
+    },
+    {
+      "text": "So if I build this\nwith single agent,",
+      "start": 139.76,
+      "duration": 2.48
+    },
+    {
+      "text": "we need to define the\nlogic in system instruction",
+      "start": 142.24,
+      "duration": 3.02
+    },
+    {
+      "text": "with this massive\nprompt and the behavior",
+      "start": 145.26,
+      "duration": 3.36
+    },
+    {
+      "text": "can become very unreliable.",
+      "start": 148.62,
+      "duration": 2.92
+    },
+    {
+      "text": "Since AI is non-deterministic,\nyou cannot always guarantee that",
+      "start": 151.54,
+      "duration": 4.36
+    },
+    {
+      "text": "it will follow your multi-step\nlogic perfectly every time.",
+      "start": 155.9,
+      "duration": 4.04
+    },
+    {
+      "text": "So the single agent lack of\ncontrol is its main weakness.",
+      "start": 159.94,
+      "duration": 5.84
+    },
+    {
+      "text": "With single agent\npattern, the benefit",
+      "start": 165.78,
+      "duration": 2.56
+    },
+    {
+      "text": "is it is very\nsimple to implement,",
+      "start": 168.34,
+      "duration": 2.54
+    },
+    {
+      "text": "and it's great for\nstraightforward, multi-step",
+      "start": 170.88,
+      "duration": 2.7
+    },
+    {
+      "text": "tasks.",
+      "start": 173.58,
+      "duration": 0.84
+    },
+    {
+      "text": "However, it is less reliable\nfor complex workflow",
+      "start": 174.42,
+      "duration": 4.44
+    },
+    {
+      "text": "and is harder to\ncontrol, and can fail",
+      "start": 178.86,
+      "duration": 2.8
+    },
+    {
+      "text": "as tasks becoming more complex.",
+      "start": 181.66,
+      "duration": 3.32
+    },
+    {
+      "text": "Now let's get to our second\npart of this video, which",
+      "start": 184.98,
+      "duration": 3.35
+    },
+    {
+      "text": "is the sequential agent.",
+      "start": 188.33,
+      "duration": 1.68
+    },
+    {
+      "text": "So with the task\nwe covered earlier,",
+      "start": 190.01,
+      "duration": 2.32
+    },
+    {
+      "text": "how do we add in more control?",
+      "start": 192.33,
+      "duration": 2.2
+    },
+    {
+      "text": "This brings us to our\nfirst multi-agent pattern,",
+      "start": 194.53,
+      "duration": 2.84
+    },
+    {
+      "text": "the sequential agent.",
+      "start": 197.37,
+      "duration": 1.54
+    },
+    {
+      "text": "And this pattern is for highly\nstructured, repeatable task,",
+      "start": 198.91,
+      "duration": 4.3
+    },
+    {
+      "text": "because the order of\nthe operation is fixed.",
+      "start": 203.21,
+      "duration": 2.9
+    },
+    {
+      "text": "So the output of one subagent\nbecomes the direct input",
+      "start": 206.11,
+      "duration": 3.86
+    },
+    {
+      "text": "for the next subagent.",
+      "start": 209.97,
+      "duration": 1.58
+    },
+    {
+      "text": "It's like an assembly line.",
+      "start": 211.55,
+      "duration": 1.94
+    },
+    {
+      "text": "And for our trip, we can break\ndown to two specialized agents.",
+      "start": 213.49,
+      "duration": 4.34
+    },
+    {
+      "text": "So we have this first food\nfinding agent and the second,",
+      "start": 217.83,
+      "duration": 3.82
+    },
+    {
+      "text": "a transportation agent.",
+      "start": 221.65,
+      "duration": 1.7
+    },
+    {
+      "text": "This sequential agent\nensures that we always",
+      "start": 223.35,
+      "duration": 3.06
+    },
+    {
+      "text": "run this food finding\nagent first, and then",
+      "start": 226.41,
+      "duration": 2.4
+    },
+    {
+      "text": "this transportation agent next.",
+      "start": 228.81,
+      "duration": 2.24
+    },
+    {
+      "text": "So this gives us predictable,\nreliable execution.",
+      "start": 231.05,
+      "duration": 4.04
+    },
+    {
+      "text": "And you can take\na look at a screen",
+      "start": 235.09,
+      "duration": 1.64
+    },
+    {
+      "text": "for this code example of how to\nwrite it in sequential agent.",
+      "start": 236.73,
+      "duration": 6.16
+    },
+    {
+      "text": "All right, let's try\nit out in ADK web UI.",
+      "start": 242.89,
+      "duration": 5.2
+    },
+    {
+      "text": "And you can look\nat the tracing tab.",
+      "start": 248.09,
+      "duration": 1.92
+    },
+    {
+      "text": "You can see that it's executed\nthe food agent first and then",
+      "start": 250.01,
+      "duration": 3.15
+    },
+    {
+      "text": "the transportation agent next.",
+      "start": 253.16,
+      "duration": 1.94
+    },
+    {
+      "text": "Perfect.",
+      "start": 255.1,
+      "duration": 1.32
+    },
+    {
+      "text": "So how do they communicate\nwith each other?",
+      "start": 256.42,
+      "duration": 2.66
+    },
+    {
+      "text": "So they share information\nthrough this shared session",
+      "start": 259.08,
+      "duration": 3.32
+    },
+    {
+      "text": "state, which act like\na shared scratchpad.",
+      "start": 262.4,
+      "duration": 3.58
+    },
+    {
+      "text": "You can check the session\nstate value at this tab.",
+      "start": 265.98,
+      "duration": 2.98
+    },
+    {
+      "text": "And once the first agent\nwrites its finding,",
+      "start": 268.96,
+      "duration": 3.08
+    },
+    {
+      "text": "and then the second\nagent reads it from it",
+      "start": 272.04,
+      "duration": 2.64
+    },
+    {
+      "text": "by using this curly braces\nin its system prompt.",
+      "start": 274.68,
+      "duration": 3.48
+    },
+    {
+      "text": "So this is a form of short-term\nmemory for your agent system.",
+      "start": 278.16,
+      "duration": 4.68
+    },
+    {
+      "text": "And the advantages\nof sequential agent,",
+      "start": 282.84,
+      "duration": 2.96
+    },
+    {
+      "text": "is that it has high degree\nof control and reliability.",
+      "start": 285.8,
+      "duration": 4.52
+    },
+    {
+      "text": "It is more predictable\nthan a single agent,",
+      "start": 290.32,
+      "duration": 3.2
+    },
+    {
+      "text": "but it can be very inflexible.",
+      "start": 293.52,
+      "duration": 2.4
+    },
+    {
+      "text": "This rigid predefined\nstructure can't",
+      "start": 295.92,
+      "duration": 2.64
+    },
+    {
+      "text": "adapt to dynamic situations.",
+      "start": 298.56,
+      "duration": 2.4
+    },
+    {
+      "text": "Now let's go to the\nthird part of this video,",
+      "start": 300.96,
+      "duration": 2.88
+    },
+    {
+      "text": "the parallel agent.",
+      "start": 303.84,
+      "duration": 1.6
+    },
+    {
+      "text": "So, what if some tasks don't\nneed to be happen in order?",
+      "start": 305.44,
+      "duration": 4.26
+    },
+    {
+      "text": "Let's say, if I want\nto plan a full trip,",
+      "start": 309.7,
+      "duration": 2.68
+    },
+    {
+      "text": "need to find a good museum,\nfind a good concert,",
+      "start": 312.38,
+      "duration": 3.02
+    },
+    {
+      "text": "and a good restaurant.",
+      "start": 315.4,
+      "duration": 1.54
+    },
+    {
+      "text": "If I'm doing them in sequential\norder, it will be slow.",
+      "start": 316.94,
+      "duration": 3.5
+    },
+    {
+      "text": "This is where the parallel\nagent pattern really shines.",
+      "start": 320.44,
+      "duration": 3.52
+    },
+    {
+      "text": "It allows multiple\nspecialized agents",
+      "start": 323.96,
+      "duration": 2.8
+    },
+    {
+      "text": "to run independently\nat the same time.",
+      "start": 326.76,
+      "duration": 3.0
+    },
+    {
+      "text": "We can have three agents\nmuseum finder, concert finder,",
+      "start": 329.76,
+      "duration": 4.5
+    },
+    {
+      "text": "restaurant finder, all\nsearching concurrently.",
+      "start": 334.26,
+      "duration": 3.38
+    },
+    {
+      "text": "As you can see, this\nwill be a lot faster",
+      "start": 337.64,
+      "duration": 2.8
+    },
+    {
+      "text": "compared to doing them\nin sequential order.",
+      "start": 340.44,
+      "duration": 2.82
+    },
+    {
+      "text": "Of course, after they\nall find something,",
+      "start": 343.26,
+      "duration": 2.64
+    },
+    {
+      "text": "we need to bring these\nresults together.",
+      "start": 345.9,
+      "duration": 3.0
+    },
+    {
+      "text": "So a common approach, is combine\nthis with a sequential agent.",
+      "start": 348.9,
+      "duration": 4.98
+    },
+    {
+      "text": "So first, we will run\nthe search in parallel.",
+      "start": 353.88,
+      "duration": 3.4
+    },
+    {
+      "text": "And then second, we will\nrun a final aggregator agent",
+      "start": 357.28,
+      "duration": 3.24
+    },
+    {
+      "text": "to synthesize all the results\nin a single trip plan.",
+      "start": 360.52,
+      "duration": 4.08
+    },
+    {
+      "text": "And here's the agent code\non how to put together them.",
+      "start": 364.6,
+      "duration": 3.4
+    },
+    {
+      "text": "[DING]",
+      "start": 368.0,
+      "duration": 2.2
+    },
+    {
+      "text": "All right, let's\ntest in ADK web UI.",
+      "start": 371.52,
+      "duration": 2.92
+    },
+    {
+      "text": "After we type the question\nfrom this tracing tab,",
+      "start": 374.44,
+      "duration": 3.47
+    },
+    {
+      "text": "we can see three\nsearching agents",
+      "start": 377.91,
+      "duration": 2.4
+    },
+    {
+      "text": "kick off all at the same time.",
+      "start": 380.31,
+      "duration": 1.86
+    },
+    {
+      "text": "So once they're\ndone, the results",
+      "start": 382.17,
+      "duration": 1.7
+    },
+    {
+      "text": "are returned to\nthe session state,",
+      "start": 383.87,
+      "duration": 1.62
+    },
+    {
+      "text": "as you can see from this tab.",
+      "start": 385.49,
+      "duration": 1.6
+    },
+    {
+      "text": "And then the final summarizing\nagent reads that state",
+      "start": 387.09,
+      "duration": 3.9
+    },
+    {
+      "text": "and generate our plan.",
+      "start": 390.99,
+      "duration": 1.92
+    },
+    {
+      "text": "And this logic is defined in\nthe system prompt over here.",
+      "start": 392.91,
+      "duration": 3.96
+    },
+    {
+      "text": "As you can see,\nthis is a great way",
+      "start": 396.87,
+      "duration": 2.24
+    },
+    {
+      "text": "to reduce latency for tasks\nthat can be broken down",
+      "start": 399.11,
+      "duration": 3.24
+    },
+    {
+      "text": "into independent subtasks.",
+      "start": 402.35,
+      "duration": 2.18
+    },
+    {
+      "text": "So the benefit of this\ndesign is very obvious",
+      "start": 404.53,
+      "duration": 2.54
+    },
+    {
+      "text": "that a significantly reduced\nlatency by running tasks",
+      "start": 407.07,
+      "duration": 3.5
+    },
+    {
+      "text": "at the same time.",
+      "start": 410.57,
+      "duration": 1.14
+    },
+    {
+      "text": "However, it can have\nhigher initial costs,",
+      "start": 411.71,
+      "duration": 3.12
+    },
+    {
+      "text": "because it is running\nmultiple agents all at once.",
+      "start": 414.83,
+      "duration": 3.58
+    },
+    {
+      "text": "And in a lot of use cases, it\nrequires gather or synthesize",
+      "start": 418.41,
+      "duration": 3.98
+    },
+    {
+      "text": "step to combine the result,\nwhich can add complexity",
+      "start": 422.39,
+      "duration": 3.36
+    },
+    {
+      "text": "to our design.",
+      "start": 425.75,
+      "duration": 1.16
+    },
+    {
+      "text": "All right, let's recap\nwhat we covered so far.",
+      "start": 426.91,
+      "duration": 2.9
+    },
+    {
+      "text": "So we covered the single agent.",
+      "start": 429.81,
+      "duration": 1.84
+    },
+    {
+      "text": "It is simple to implement.",
+      "start": 431.65,
+      "duration": 1.72
+    },
+    {
+      "text": "It can be very flexible,\nbut it lacks certain control",
+      "start": 433.37,
+      "duration": 3.26
+    },
+    {
+      "text": "over this whole system.",
+      "start": 436.63,
+      "duration": 1.65
+    },
+    {
+      "text": "We also cover the\nsequential agent.",
+      "start": 438.28,
+      "duration": 2.0
+    },
+    {
+      "text": "It adds a certain\nlevel of control",
+      "start": 440.28,
+      "duration": 1.9
+    },
+    {
+      "text": "and make the system\nmore reliable,",
+      "start": 442.18,
+      "duration": 2.08
+    },
+    {
+      "text": "but it is not very flexible.",
+      "start": 444.26,
+      "duration": 2.3
+    },
+    {
+      "text": "And lastly, we covered\nthe parallel agent.",
+      "start": 446.56,
+      "duration": 2.54
+    },
+    {
+      "text": "It is fast, efficient, and\ngreat for independent tasks,",
+      "start": 449.1,
+      "duration": 3.88
+    },
+    {
+      "text": "but it can add cost and\ncomplexity to your system.",
+      "start": 452.98,
+      "duration": 3.14
+    },
+    {
+      "text": "With those pattern,\nyou can already",
+      "start": 456.12,
+      "duration": 1.66
+    },
+    {
+      "text": "build some powerful workflow.",
+      "start": 457.78,
+      "duration": 2.1
+    },
+    {
+      "text": "And in our next\nvideo, we're going",
+      "start": 459.88,
+      "duration": 1.62
+    },
+    {
+      "text": "to level up with more advanced\npatterns for handling even more",
+      "start": 461.5,
+      "duration": 3.72
+    },
+    {
+      "text": "complex and dynamic problems.",
+      "start": 465.22,
+      "duration": 1.98
+    },
+    {
+      "text": "We will explore cases with\ndifferent practical examples.",
+      "start": 467.2,
+      "duration": 3.38
+    },
+    {
+      "text": "And the pattern we're going to\ncover next episode, including",
+      "start": 470.58,
+      "duration": 3.08
+    },
+    {
+      "text": "the loop and critique pattern\nfor self-correction, so",
+      "start": 473.66,
+      "duration": 3.04
+    },
+    {
+      "text": "coordinated pattern\nfor dynamic routing,",
+      "start": 476.7,
+      "duration": 2.38
+    },
+    {
+      "text": "and also the powerful concept\nof using agent as a tool.",
+      "start": 479.08,
+      "duration": 3.9
+    },
+    {
+      "text": "All right, I will see\nyou in next video.",
+      "start": 482.98,
+      "duration": 1.78
+    },
+    {
+      "text": "Bye.",
+      "start": 484.76,
+      "duration": 0.6
+    },
+    {
+      "text": "[MUSIC PLAYING]",
+      "start": 485.36,
+      "duration": 2.75
+    }
+  ]
+}
