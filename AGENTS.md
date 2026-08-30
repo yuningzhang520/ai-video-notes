@@ -1,4 +1,4 @@
-# CLAUDE.md — Video → Verifiable Visual Notes
+# AGENTS.md — Video → Verifiable Visual Notes
 
 Operational guardrails for this build: a tool that turns a visually-dense video (talk, coding tutorial) into topic-segmented notes where on-screen content (code / tables / diagrams) is extracted and every grounded bullet links to its source frame or transcript timestamp (click-to-verify). Full rationale -> **APPROACH.md** (read on demand); this file is the always-on rules. If the build diverges from APPROACH.md, update APPROACH.md to match.
 
@@ -35,4 +35,4 @@ Operational guardrails for this build: a tool that turns a visually-dense video 
 - Don't put any code in `./dist` — `submit.sh` wipes and recreates it on every run.
 
 ## Compaction
-- When compacting, preserve: the modified files, commands run, any failing tests, the next step, and any decision that diverged from APPROACH.md.
+- When compacting context, preserve: the modified files, commands run, any failing tests, the next step, and any decision that diverged from APPROACH.md.
