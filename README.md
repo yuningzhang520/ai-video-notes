@@ -48,6 +48,10 @@ A batch pipeline — process a video once, then read. In order:
 5. **Structure** — one LLM pass organizes everything into topic sections with grounded bullets; deterministic assembly builds the final note from the extracted blocks, carried verbatim.
 6. **Render** — a hierarchical reader with click-to-verify against the embedded player.
 
+### Pipeline overview
+
+Dense samples are compared with a cropped perceptual hash (pHash), so static slides and UI states collapse without letterboxing or player chrome skewing the result. An OCR-superset collapse then removes frames whose text is contained in a more complete capture, and an on-screen-text gate sends only the remaining text-bearing representatives to vision.
+
 ## Architecture & key decisions
 
 The full write-up — decisions, trade-offs, what breaks first, what I'd build next — is in **[APPROACH.md](APPROACH.md)**. The decisions I'm most proud of:
